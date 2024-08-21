@@ -1,6 +1,6 @@
 package Array;
 
-public class RotateArray {
+public class LeftRotateArray {
     public static void main(String[] args) {
         int[] arr = { 13, 46, 24, 52, 20, 9 };
         int n = 6;
