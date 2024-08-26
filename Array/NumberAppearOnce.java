@@ -8,8 +8,6 @@ public class NumberAppearOnce {
         for (int i = 0; i < arr.length; i++) {
             appearOnce = appearOnce ^ arr[i];
         }
-
         System.out.print("Number Appeared once is :" + appearOnce);
-
     }
 }
