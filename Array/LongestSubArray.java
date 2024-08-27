@@ -1,7 +1,6 @@
 package Array;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class LongestSubArray {
 

@@ -26,10 +26,10 @@ public class RearrangeElement {
     public static void main(String[] args) {
         int[] arr = new int[8];
 
-        Scanner input = new Scanner(System.in);
-
-        for (int i = 0; i < 8; i++) {
-            arr[i] = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            for (int i = 0; i < 8; i++) {
+                arr[i] = input.nextInt();
+            }
         }
 
         ReArrange(arr, 8);
