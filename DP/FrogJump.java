@@ -14,7 +14,6 @@ public class FrogJump {
         }else{
             right = Integer.MAX_VALUE;
         }
-        System.out.println(left+" "+right);
         DP[n]= Math.min(left, right);
 
         return Math.min(left, right);
@@ -26,5 +25,19 @@ public class FrogJump {
         int[] arr = {10,5,25,4};
         int totalJump = jump(n-1, DP, arr);
         System.out.println(totalJump);
+
+        //tabulation
+        int[] DP2 = new int[n+1];
+        DP2[0] = 0;
+        for(int i=1;i<n;i++){
+            int first = DP[i-1] + Math.abs(arr[i] - arr[i-1]);
+            int second = Integer.MAX_VALUE;
+            if(i>1)
+                second = DP[i-2] +  Math.abs(arr[i] -  arr[i-2]);
+            
+            DP[i] = Math.min(first, second);
+        }
+
+        System.out.println(DP[n-1]);
     }
 }
